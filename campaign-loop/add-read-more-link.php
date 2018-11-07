@@ -15,7 +15,7 @@
  * @return  void
  */
 function ed_add_read_more_link_to_campaigns( $campaign ) {
-	printf( __( '<a href="%s">Read More</a>', 'your-namespace' ), get_permalink( $campaign ) );
+	printf( __( '<a href="%s">Read More</a>', 'your-namespace' ), get_permalink( $campaign->ID ) );
 }
 
 add_action( 'charitable_campaign_content_loop_after', 'ed_add_read_more_link_to_campaigns', 5 );
